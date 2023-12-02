@@ -1,0 +1,103 @@
+$bodyBGcolor: hsl(225, 100%, 94%);
+
+@mixin ItemFlex() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+//Removing default margins
+h1,
+h2,
+p,
+body,
+button,
+img {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: $bodyBGcolor;
+    font-size: 1rem;
+    min-height: 100vh;
+    gap: 1.5rem;
+
+    //Flex Display
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // Container properties
+    .container {
+
+        max-width: 375px;
+        margin: 16px;
+
+        .innercontainer {
+            background-color: white;
+            padding: 1.5rem;
+        }
+    }
+
+}
+
+.illustration {
+    width: 100%;
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+
+    //Image
+    img {
+        width: 100%;
+    }
+
+    // Texts
+    p {
+        color: gray;
+        text-align: center;
+    }
+}
+
+.item2 {
+    background-color: hsla(225, 100%, 94%, 0.477);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 5px
+}
+
+.item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    //Buttons properties
+    .BTN1 {
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+        border: none;
+        padding: 10px;
+
+    }
+
+    .BTN2 {
+        background-color: transparent;
+        border: none;
+        
+    }
+}

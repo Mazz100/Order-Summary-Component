@@ -9,6 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
 
+  <!--Google Font Links-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,35 +32,35 @@
 <body>
   <main>
     <div class="container">
-      <div class="item1">
+      <img class="illustration" src="images/illustration-hero.svg" alt="">
+      <div class="innercontainer">
+        <div class="item1">
 
-        <img src="images/illustration-hero.svg" alt="">
-        <h1>Order Summary</h1>
-        <p>
-          You can now listen to millions of songs, audiobooks, and podcasts on any
-          device anywhere you like!
-        </p>
+          <h1>Order Summary</h1>
+          <p>
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </p>
 
-      </div>
-
-      <div class="item2">
-
-        <img src="images/icon-music.svg" alt="">
-        <p>Annual Plan
-          $59.99/year
-        </p>
-        <button>Change</button>
-
-      </div>
-      <div class="item3">
-
-        <button>Proceed to Payment</button>
-        <div>
-          <button>Cancel Order</button>
         </div>
 
-      </div>
+        <div class="item2">
 
+          <img src="images/icon-music.svg" alt="">
+          <div>
+            <strong>Annual Plan</strong>
+            <p>$59.99/year</p>
+          </div>
+          <button>Change</button>
+
+        </div>
+        <div class="item3">
+
+          <button class="BTN1">Proceed to Payment</button>
+          <button class="BTN2">Cancel Order</button>
+
+        </div>
+      </div>
     </div>
   </main>
 
