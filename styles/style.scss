@@ -1,8 +1,9 @@
 $bodyBGcolor: hsl(225, 100%, 94%);
+$item2BGcolor: hsla(225, 100%, 94%, 0.477);
 
-@mixin ItemFlex() {
+@mixin Flexfunc($direction) {
     display: flex;
-    flex-direction: column;
+    flex-direction: $direction;
     justify-content: center;
     align-items: center;
 
@@ -27,20 +28,19 @@ body {
     gap: 1.5rem;
 
     //Flex Display
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include Flexfunc(column);
 
     // Container properties
     .container {
 
-        max-width: 375px;
+        max-width: 325px;
         margin: 16px;
 
         .innercontainer {
             background-color: white;
             padding: 1.5rem;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
         }
     }
 
@@ -48,13 +48,12 @@ body {
 
 .illustration {
     width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .item1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include Flexfunc(column);
     margin-bottom: 24px;
 
     //Image
@@ -66,38 +65,42 @@ body {
     p {
         color: gray;
         text-align: center;
+        margin-top: 16px;
     }
 }
 
 .item2 {
-    background-color: hsla(225, 100%, 94%, 0.477);
-    display: flex;
-    flex-direction: row;
+    background-color: $item2BGcolor;
+    @include Flexfunc(row);
     justify-content: space-around;
-    align-items: center;
-    margin-bottom: 24px;
-    padding: 5px
+    padding: 5px;
+    border-radius: 12px;
+
+    //Button proprties
+    button {
+        border: none;
+        text-decoration: underline;
+        font-weight: 700;
+        color: hsl(245, 75%, 52%);
+    }
 }
 
 .item3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include Flexfunc(column);
     margin-top: 24px;
 
-    //Buttons properties
-    .BTN1 {
+    //Links properties
+    .link1 {
+        text-decoration: none;
         background-color: hsl(245, 75%, 52%);
         color: white;
-        border: none;
+        margin-bottom: 10px;
         padding: 10px;
-
+        border-radius: 10px;
     }
 
-    .BTN2 {
-        background-color: transparent;
-        border: none;
-        
+    .link2 {
+        text-decoration: none;
+
     }
 }
