@@ -1,5 +1,6 @@
 $bodyBGcolor: hsl(225, 100%, 94%);
-$item2BGcolor: hsla(225, 100%, 94%, 0.477);
+$item2BGcolor: hsla(225, 100%, 94%, 0.2);
+$buttonBGcolor: hsl(245, 75%, 52%);
 
 @mixin Flexfunc($direction) {
     display: flex;
@@ -14,8 +15,7 @@ h1,
 h2,
 p,
 body,
-button,
-img {
+button {
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -26,7 +26,7 @@ body {
     font-size: 1rem;
     min-height: 100vh;
     gap: 1.5rem;
-
+    box-sizing: border-box;
     //Flex Display
     @include Flexfunc(column);
 
@@ -39,11 +39,16 @@ body {
         .innercontainer {
             background-color: white;
             padding: 1.5rem;
+            padding-top: 0;
             border-bottom-right-radius: 20px;
             border-bottom-left-radius: 20px;
         }
     }
 
+    //media query for bigger screen
+    @media (min-width: 400px) {
+        
+    }
 }
 
 .illustration {
@@ -55,17 +60,23 @@ body {
 .item1 {
     @include Flexfunc(column);
     margin-bottom: 24px;
+    margin-top: -5px;
 
     //Image
     img {
         width: 100%;
     }
 
-    // Texts
+    // Text propreties
+    header {
+        padding-top: 24px;
+    }
+
     p {
         color: gray;
         text-align: center;
-        margin-top: 16px;
+        line-height: 1.4;
+        padding-top: 24px;
     }
 }
 
@@ -76,12 +87,27 @@ body {
     padding: 5px;
     border-radius: 12px;
 
+    //Text propreties
+    p {
+       color: gray;
+    }
+
     //Button proprties
     button {
+        background-color: transparent;
         border: none;
         text-decoration: underline;
-        font-weight: 700;
-        color: hsl(245, 75%, 52%);
+        font-size: 0.75rem;
+        font-weight: 900;
+        color: $buttonBGcolor
+    }
+
+    //Active State
+    button:hover {
+        cursor: pointer;
+        background-color: $buttonBGcolor;
+        color: white;
+        border-radius: 10px;
     }
 }
 
@@ -92,15 +118,22 @@ body {
     //Links properties
     .link1 {
         text-decoration: none;
-        background-color: hsl(245, 75%, 52%);
+        text-align: center;
+        font-weight: 700;
+        background-color: $buttonBGcolor;
         color: white;
-        margin-bottom: 10px;
+        width: 95%;
+        margin-bottom: 16px;
         padding: 10px;
         border-radius: 10px;
+        box-shadow: 0px 5px 5px 1px hsla(245, 75%, 52%, 0.4);
     }
 
     .link2 {
         text-decoration: none;
-
+        font-weight: 900;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        color: black;
     }
 }
