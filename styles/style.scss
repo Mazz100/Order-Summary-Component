@@ -25,7 +25,7 @@ button {
 //its the mobile layout
 body {
     //Background for mobile
-    background-image: url('/images/pattern-background-mobile.svg');
+    background-image: url('../images/pattern-background-mobile.svg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -42,13 +42,14 @@ body {
     //media query for bigger screen
     @media (min-width: 400px) {
 
-        background-image: url('/images/pattern-background-desktop.svg');
+        background-image: url('../images/pattern-background-desktop.svg');
         background-position: top;
         background-repeat: no-repeat;
         background-size: contain;
 
         .container {
             max-width: 400px;
+            margin: 0;
         }
 
         header {
