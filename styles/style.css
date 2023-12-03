@@ -19,24 +19,32 @@ body {
   justify-content: center;
   align-items: center;
 }
-body .container {
-  max-width: 325px;
-  margin: 16px;
-}
-body .container .innercontainer {
-  background-color: white;
-  padding: 2rem;
-  padding-top: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
 @media (min-width: 400px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   body .container {
     max-width: 400px;
   }
   body header {
     font-size: 1.25rem;
   }
+}
+
+.container {
+  max-width: 325px;
+  margin: 16px;
+}
+
+.innercontainer {
+  background-color: white;
+  padding: 2rem;
+  padding-top: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .illustration {
@@ -112,9 +120,6 @@ body .container .innercontainer {
   border-radius: 10px;
   box-shadow: 0px 5px 5px 1px hsla(245, 75%, 52%, 0.4);
 }
-.item3 .link1:hover {
-  background-color: hsl(245, 75%, 65%);
-}
 .item3 .link2 {
   text-decoration: none;
   font-weight: 900;
@@ -122,6 +127,9 @@ body .container .innercontainer {
   opacity: 0.7;
   color: black;
   margin-bottom: 16px;
+}
+.item3 .link1:hover {
+  background-color: hsl(245, 75%, 65%);
 }
 .item3 .link2:hover {
   opacity: 1;
